@@ -73,6 +73,7 @@ def average_gpa(city, state):
             }
         cursor.execute(SELECTSQL, values)
         list_gpas = cursor.fetchall()
+        # search in functools itemgetter
         all_gpas = []
         for gpa in list_gpas:
             all_gpas.append((gpa[0]))
